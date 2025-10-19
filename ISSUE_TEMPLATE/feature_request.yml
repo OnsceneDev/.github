@@ -1,0 +1,29 @@
+name: "✨ Feature request"
+description: Suggest an idea or improvement
+title: "feat: <short summary>"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem to solve
+      description: What user problem does this address?
+      placeholder: "As a <role>, I want <capability> so that <outcome>."
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Rough idea of the solution (optional)
+  - type: textarea
+    id: success
+    attributes:
+      label: Success criteria
+      description: What would make this feel “done”?
+      placeholder: "e.g., latency < 500ms; 3 acceptance tests pass"
+  - type: input
+    id: related
+    attributes:
+      label: Related issues
+      description: Links to related issues/PRs/discussions
