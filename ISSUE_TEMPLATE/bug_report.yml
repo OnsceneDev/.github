@@ -1,0 +1,39 @@
+name: "🐞 Bug report"
+description: Something isn't working
+title: "bug: <short summary>"
+labels: ["bug"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for filing a bug. Please fill out the details below.
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: The version/commit where you saw this
+      placeholder: e.g., v0.3.1 or commit SHA
+    validations:
+      required: true
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: What happened?
+      description: Include steps to reproduce and what you expected
+      placeholder: "1) …\n2) …\n3) …"
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs / screenshots
+      description: Paste relevant logs or drop images
+      render: shell
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      options: ["P0 - blocking", "P1 - serious", "P2 - minor"]
+    validations:
+      required: true
